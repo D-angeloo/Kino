@@ -193,3 +193,46 @@ section {
     background-color: #1c1c1c;
     color: #FFFFFF;
 }
+/* Estilos do rodapé */
+footer {
+    background-color: #000000;
+    padding: 20px;
+    border-top: 2px solid #b76e79;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+    color: #e50914;
+    font-size: 14px;
+}
+
+.footer-content .social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-content .social-media li {
+    display: inline-block;
+}
+
+.footer-content .social-media a {
+    color: #FFFFFF;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-content .social-media a:hover {
+    color: #e50914;
+}

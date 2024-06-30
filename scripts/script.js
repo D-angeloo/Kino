@@ -1,4 +1,4 @@
-// Seleção de elementos
+
 const resultados = document.querySelector("#resultados");
 const searchInput = document.querySelector("#searchInput");
 const searchButton = document.querySelector("#searchButton");
@@ -6,11 +6,11 @@ const genreSelect = document.querySelector("#genreSelect");
 const topMoviesLink = document.querySelector("#topMoviesLink");
 const latestMoviesLink = document.querySelector("#latestMoviesLink");
 
-// Função para buscar informações da API
+
 async function buscarDados(url) {
     const resposta = await fetch(url);
     const dados = await resposta.json();
-    resultados.innerHTML = ""; // Limpar resultados anteriores
+    resultados.innerHTML = ""; 
     dados.results.forEach((filme) => {
         const novoElemento = document.createElement("div");
         novoElemento.className = "card";
@@ -31,38 +31,26 @@ async function buscarDados(url) {
         resultados.append(novoElemento);
     });
 }
-
-// Função para buscar filmes populares
 function buscarFilmesPopulares() {
     const url = "https://api.themoviedb.org/3/movie/popular?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR";
     buscarDados(url);
 }
-
-// Função para buscar filmes com base no termo de pesquisa
 function buscarFilmesPorTermo(termo) {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR&query=${encodeURIComponent(termo)}`;
     buscarDados(url);
 }
-
-// Função para buscar filmes por gênero
 function buscarFilmesPorGenero(generoId) {
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR&with_genres=${generoId}`;
     buscarDados(url);
 }
-
-// Função para buscar os melhores filmes (nota >= 7 e número mínimo de votos)
 function buscarTopFilmes() {
     const url = "https://api.themoviedb.org/3/discover/movie?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR&vote_average.gte=7&vote_average.lte=9&vote_count.gte=500&sort_by=vote_average.desc";
     buscarDados(url);
 }
-
-// Função para buscar lançamentos recentes
 function buscarLancamentos() {
     const url = "https://api.themoviedb.org/3/movie/now_playing?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR";
     buscarDados(url);
 }
-
-// Event listener para o botão de busca
 searchButton.addEventListener("click", () => {
     const termo = searchInput.value.trim();
     if (termo) {
@@ -70,10 +58,10 @@ searchButton.addEventListener("click", () => {
     } else {
         buscarFilmesPopulares();
     }
-    searchInput.value = ''; // Limpar input após a pesquisa
+    searchInput.value = ''; 
 });
 
-// Event listener para a tecla "Enter" na barra de pesquisa
+
 searchInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         const termo = searchInput.value.trim();
@@ -82,11 +70,10 @@ searchInput.addEventListener("keypress", (event) => {
         } else {
             buscarFilmesPopulares();
         }
-        searchInput.value = ''; // Limpar input após a pesquisa
+        searchInput.value = ''; 
     }
 });
 
-// Event listener para a seleção de gênero
 genreSelect.addEventListener("change", () => {
     const generoId = genreSelect.value;
     if (generoId) {
@@ -96,7 +83,6 @@ genreSelect.addEventListener("change", () => {
     }
 });
 
-// Event listeners para os links de navegação
 topMoviesLink.addEventListener("click", (event) => {
     event.preventDefault();
     buscarTopFilmes();
@@ -107,10 +93,9 @@ latestMoviesLink.addEventListener("click", (event) => {
     buscarLancamentos();
 });
 
-// Inicializar com filmes populares
+
 buscarFilmesPopulares();
 
-// Função para obter o nome do gênero pelo id
 function getGenreName(id) {
     const genres = {
         28: 'Ação',

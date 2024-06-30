@@ -1,7 +1,7 @@
-// selecao de elementos
+
 const bannerFilme = document.querySelector("#banner-filme")
 const detalhesFilme = document.querySelector("#detalhes-filme")
-// funcition para catar informaçao da API
+
 async function buscarDetalhes() {
     const urlParams = new URLSearchParams(window.location.search)
     const filmeId = urlParams.get('id')
@@ -26,3 +26,4 @@ async function buscarDetalhes() {
 }
 
 buscarDetalhes()
+
