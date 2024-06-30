@@ -1,10 +1,13 @@
 // seleçao de elementos
 const resultados = document.querySelector("#resultados")
+const searchInput = document.querySelector("#searchInput")
+const searchButton = document.querySelector("#searchButton")
 
-// funçao para buscar informações da API
-async function buscarDados() {
-    const resposta = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR")
+// função para buscar informações da API
+async function buscarDados(url) {
+    const resposta = await fetch(url)
     const dados = await resposta.json()
+    resultados.innerHTML = "" // Limpar resultados anteriores
     dados.results.forEach((filme) => {
         const novoElemento = document.createElement("div")
         novoElemento.className = "card"
@@ -26,7 +29,32 @@ async function buscarDados() {
     })
 }
 
-// funãoo pra catar o genero pelo id
+// função para buscar filmes populares
+function buscarFilmesPopulares() {
+    const url = "https://api.themoviedb.org/3/movie/popular?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR"
+    buscarDados(url)
+}
+
+// função para buscar filmes com base no termo de pesquisa
+function buscarFilmesPorTermo(termo) {
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=7d14869f82ca6dee1750249a3ab5f398&language=pt-BR&query=${encodeURIComponent(termo)}`
+    buscarDados(url)
+}
+
+// event listener para o botão de busca
+searchButton.addEventListener("click", () => {
+    const termo = searchInput.value.trim()
+    if (termo) {
+        buscarFilmesPorTermo(termo)
+    } else {
+        buscarFilmesPopulares()
+    }
+})
+
+// inicializar com filmes populares
+buscarFilmesPopulares()
+
+// função para obter o nome do gênero pelo id
 function getGenreName(id) {
     const genres = {
         28: 'Ação',
@@ -51,5 +79,3 @@ function getGenreName(id) {
     }
     return genres[id] || 'Desconhecido'
 }
-
-buscarDados()

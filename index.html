@@ -10,21 +10,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <img id="icon" src="./image/icon.png" alt="iconebtw">
-        <h1>KINO</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>  
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
+     <header>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar filmes...">
+                <button id="searchButton" <i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="logo-container">
+                <img id="icon" src="./image/icon.png" alt="iconebtw">
+                <h1>KINO</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
     </header>
     <main>
-       
         <section id="resultados"></section>
     </main>
     <script src="./scripts/script.js"></script>

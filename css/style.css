@@ -1,4 +1,7 @@
-/* home page css */
+/* style.css */
+
+/* Estilos existentes */
+
 * {
     font-family: "REM", sans-serif;
     font-optical-sizing: auto;
@@ -14,13 +17,23 @@ body {
 
 #icon {
     height: 55px;
+    margin-right: 1px; 
 }
 
 header {
     background-color: #000000;
     padding: 20px;
-    text-align: center;
     border-bottom: 2px solid #b76e79;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1px; 
+    margin-bottom: 10px; 
 }
 
 header h1 {
@@ -32,7 +45,6 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
@@ -103,4 +115,63 @@ section {
 .card .rating, .card .genre {
     font-size: 14px;
     color: #e50914;
+}
+
+/* Nova parte para a barra de pesquisa */
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+    overflow: hidden;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+    width: 100%;
+    outline: none;
+
+}
+
+.search-container button {
+    position: absolute;
+    right: 0;
+    top: 0; /* Ajuste para alinhar com o input */
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.search-container button:hover {
+    color: #e50914;
+}
+
+.search-container input::placeholder {
+    color: #000;
+    pointer-events: none;
+    width: 100%;
+    border-bottom: 1px solid #FFFFFF;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.search-container:hover input::placeholder {
+    transform: translateY(0);
+    color: #FFFFFF;
+}
+
+.search-container:hover {
+    width: 240px;
 }
