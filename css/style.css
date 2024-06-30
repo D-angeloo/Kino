@@ -138,7 +138,6 @@ section {
     color: #FFFFFF;
     width: 100%;
     outline: none;
-
 }
 
 .search-container button {
@@ -174,4 +173,23 @@ section {
 
 .search-container:hover {
     width: 240px;
+}
+
+/* Estilo para o dropdown de gênero */
+#genreSelect {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #1c1c1c;
+    color: #FFFFFF;
+    margin-top: 10px;
+    outline: none;
+    width: 200px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+#genreSelect option {
+    background-color: #1c1c1c;
+    color: #FFFFFF;
 }

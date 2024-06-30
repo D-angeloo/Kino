@@ -7,8 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -16,21 +14,45 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-     <header>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Buscar filmes...">
-                <button id="searchButton" <i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-            <div class="logo-container">
-                <img id="icon" src="./image/icon.png" alt="iconebtw">
-                <h1>KINO</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>  
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="logo-container">
+            <img id="icon" src="./image/icon.png" alt="Kino Logo">
+            <h1>KINO</h1>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar filmes...">
+            <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <select id="genreSelect">
+            <option value="">Selecione um gênero</option>
+            <option value="28">Ação</option>
+            <option value="12">Aventura</option>
+            <option value="16">Animação</option>
+            <option value="35">Comédia</option>
+            <option value="80">Crime</option>
+            <option value="99">Documentário</option>
+            <option value="18">Drama</option>
+            <option value="10751">Família</option>
+            <option value="14">Fantasia</option>
+            <option value="36">História</option>
+            <option value="27">Terror</option>
+            <option value="10402">Música</option>
+            <option value="9648">Mistério</option>
+            <option value="10749">Romance</option>
+            <option value="878">Ficção Científica</option>
+            <option value="10770">Cinema TV</option>
+            <option value="53">Thriller</option>
+            <option value="10752">Guerra</option>
+            <option value="37">Faroeste</option>
+        </select>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="topMoviesLink">Top Filmes</a></li>
+                <li><a href="#" id="latestMoviesLink">Lançamentos</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="resultados"></section>
