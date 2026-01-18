@@ -1,25 +1,21 @@
 # 🎬 Kino - Catálogo de Filmes
 
-O **Kino** é uma aplicação web de catálogo de filmes que permite aos usuários explorar lançamentos, ver avaliações e buscar por seus títulos favoritos. O projeto foi desenvolvido com foco em praticidade, design limpo e consumo de APIs externas.
+O **Kino** é uma aplicação web de catálogo de filmes que permite aos utilizadores explorar lançamentos, ver avaliações e procurar pelos seus títulos favoritos. O projeto foi desenvolvido com foco em praticidade e consumo de APIs externas.
 
 ## 🚀 Tecnologias Utilizadas
-
-Este projeto foi construído utilizando as seguintes tecnologias:
-
-- **HTML5**: Estruturação semântica da página.
-- **CSS3**: Estilização com foco em responsividade (Mobile-first).
-- **JavaScript (ES6+)**: Lógica de busca, manipulação do DOM e consumo de dados assíncronos.
-- **API TMDB (The Movie Database)**: Fonte de dados para filmes e séries.
+- **HTML5**: Estruturação semântica.
+- **CSS3**: Estilização com foco em responsividade.
+- **JavaScript (ES6+)**: Lógica de busca e consumo de dados assíncronos.
+- **API TMDB**: Fonte de dados para filmes e séries.
 
 ## 🛠️ Funcionalidades
+- Listagem dos filmes mais populares.
+- Barra de busca funcional para encontrar títulos específicos.
+- Exibição de detalhes como notas e sinopses.
+- Layout responsivo.
 
-- [x] Listagem dos filmes mais populares.
-- [x] Barra de busca funcional para encontrar títulos específicos.
-- [x] Exibição de detalhes como nota (rating) e sinopse.
-- [x] Layout responsivo para dispositivos móveis e desktop.
+## 🔗 Demonstração
+👉 [Acesse o Kino aqui](https://d-angeloo.github.io/Kino/index.html)
 
-## 📦 Como rodar o projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/d-angeloo/Kino.git](https://github.com/d-angeloo/Kino.git)
+---
+Desenvolvido por Davi Angelo
