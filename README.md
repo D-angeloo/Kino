@@ -18,4 +18,4 @@ O **Kino** é uma aplicação web de catálogo de filmes que permite aos utiliza
 👉 [Acesse o Kino aqui](https://d-angeloo.github.io/Kino/index.html)
 
 ---
-Desenvolvido por Davi Angelo
+Desenvolvido por Davi Angelo :)
